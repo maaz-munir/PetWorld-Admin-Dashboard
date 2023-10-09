@@ -1,15 +1,18 @@
 import{ useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigate = useNavigate();
+
 
   const handleSignIn = (e) => {
     e.preventDefault();
     // Add your sign-in logic here
+    navigate('home')
   };
 
   return (
